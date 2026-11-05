@@ -9,7 +9,25 @@ Wedding website plus a private client portal.
   - review and approve answers, or ask the couple to redo one
   - add timeline milestones, share document links, message the couple, keep staff-only notes, and reset their password
 
-## Run it
+## Try it without a server (GitHub Pages demo)
+
+`public/demo.js` is a pretend backend that runs in the browser and saves data to the visitor's `localStorage`. It turns on automatically on `*.github.io`, and anywhere else if you add `?demo` to the URL (`?demo=off` turns it off). When the real Node server is running it stays off.
+
+- Demo logins (password `demo1234`): **planner@demo.com** (planner dashboard) and **couple@demo.com** (client portal). The sign-in page has one-click buttons for both.
+- A gold bar at the top marks demo mode and has a **Reset demo data** button.
+- Demo data is **not shared**: each browser has its own copy, so a couple's answers won't show up on your machine. Don't put real client details in it.
+
+**Publish it:** in the repo on GitHub go to **Settings → Pages → Build and deployment → Source: GitHub Actions**. After that, `.github/workflows/pages.yml` publishes `public/` on every push to `main`. You can also run it by hand from the Actions tab. The site appears at `https://<owner>.github.io/RoyalEventsManagement/`.
+
+To preview the static demo locally:
+
+```bash
+python3 -m http.server 8000 --directory public
+```
+
+Then open http://localhost:8000/?demo
+
+## Run it with the real backend
 
 Requires Node.js 22.5 or newer (it uses the built-in SQLite module, so there's no database to install).
 
@@ -25,7 +43,7 @@ Open http://localhost:3000. The admin account is created on first start (if `ADM
 
 ## Edit the website content
 
-Everything on the public site comes from **`content/site.json`**: business name, contact email/phone/location, Instagram link, services, process steps, previous weddings and testimonials. Restart the server after editing it.
+Everything on the public site comes from **`public/content/site.json`**: business name, contact email/phone/location, Instagram link, services, process steps, previous weddings and testimonials. Restart the server after editing it.
 
 **Wedding photos:** put images in `public/images/weddings/` and set each wedding's `"image"`, e.g. `"image": "/images/weddings/priya-arjun.jpg"`. Weddings without a photo show a coloured monogram card in that wedding's `palette` colours.
 

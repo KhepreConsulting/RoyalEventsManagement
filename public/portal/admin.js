@@ -5,8 +5,8 @@
   const modalBody = document.getElementById('modal-body');
 
   const user = await me();
-  if (!user) return (location.href = '/portal/login');
-  if (user.role !== 'admin') return (location.href = '/portal/client');
+  if (!user) return (location.href = 'login.html');
+  if (user.role !== 'admin') return (location.href = 'client.html');
   addSignOut(user.name);
 
   let meta = { statuses: [], fieldTypes: [] };
@@ -136,7 +136,7 @@
         openModal(`
           <h2>Portal created ✓</h2>
           <p>Send these sign-in details to <b>${esc(body.couple_names)}</b>:</p>
-          <div class="answer" style="background:var(--ivory)" id="creds">Sign in at: ${esc(location.origin)}/portal/login
+          <div class="answer" style="background:var(--ivory)" id="creds">Sign in at: ${esc(new URL("login.html", location.href).href)}
 Email: ${esc(body.email)}
 Password: ${esc(out.password)}</div>
           <p class="muted" style="font-size:.9rem;margin-top:10px">They can change their password after signing in. This password won't be shown again.</p>
@@ -149,6 +149,7 @@ Password: ${esc(out.password)}</div>
 
   // ---------- Client detail ----------
   async function renderClient(id) {
+    tab = 'clients';
     if (!meta.statuses.length) meta = await api('/api/admin/dashboard');
     const { client: c, requests, messages, documents, timeline } = await api(`/api/admin/clients/${id}`);
     const open = requests.filter((r) => r.status === 'open').length;

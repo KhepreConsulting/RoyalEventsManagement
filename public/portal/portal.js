@@ -10,7 +10,7 @@ window.Portal = (() => {
       credentials: 'same-origin',
     });
     const data = await res.json().catch(() => ({}));
-    if (res.status === 401 && !url.includes('/auth/login') && url !== '/api/me' && !location.pathname.startsWith('/portal/login')) { location.href = '/portal/login'; throw new Error('Please sign in'); }
+    if (res.status === 401 && !url.includes('/auth/login') && url !== '/api/me' && !/login(\.html)?$/.test(location.pathname)) { location.href = 'login.html'; throw new Error('Please sign in'); }
     if (!res.ok) throw new Error(data.error || 'Something went wrong');
     return data;
   }
@@ -60,7 +60,7 @@ window.Portal = (() => {
     nav.innerHTML = `<span class="muted nav-user" style="font-size:.9rem">${esc(name)}</span>
       <button class="btn ghost small" id="pw-btn" type="button">Password</button>
       <button class="btn small" id="logout-btn" type="button">Sign out</button>`;
-    document.getElementById('logout-btn').onclick = async () => { await api('/api/auth/logout', { method: 'POST', body: {} }); location.href = '/portal/login'; };
+    document.getElementById('logout-btn').onclick = async () => { await api('/api/auth/logout', { method: 'POST', body: {} }); location.href = 'login.html'; };
     document.getElementById('pw-btn').onclick = async () => {
       const current = prompt('Current password');
       if (!current) return;

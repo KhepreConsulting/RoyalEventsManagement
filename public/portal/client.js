@@ -3,8 +3,8 @@
   const app = document.getElementById('app');
 
   const user = await me();
-  if (!user) return (location.href = '/portal/login');
-  if (user.role === 'admin') return (location.href = '/portal/admin');
+  if (!user) return (location.href = 'login.html');
+  if (user.role === 'admin') return (location.href = 'admin.html');
   addSignOut(user.name);
 
   function inputFor(r) {

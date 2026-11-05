@@ -2,7 +2,7 @@ const path = require('path');
 const crypto = require('crypto');
 const express = require('express');
 const { db, hashPassword, verifyPassword, ensureAdmin } = require('./db');
-const site = require('./content/site.json');
+const site = require('./public/content/site.json');
 
 ensureAdmin();
 
@@ -317,7 +317,7 @@ app.use('/api', (_req, res) => bad(res, 'Not found', 404));
 
 // ---------- static ----------
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
-app.get('/portal', (_req, res) => res.redirect('/portal/login'));
+app.get('/portal', (_req, res) => res.redirect('/portal/login.html'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Royal Events Management running on http://localhost:${PORT}`));
