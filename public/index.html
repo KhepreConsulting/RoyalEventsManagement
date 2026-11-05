@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Royal Events Management — Wedding Planning & Design</title>
+  <meta name="description" content="Full-service wedding planning, coordination and décor. Weddings planned like royalty.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b8913f'><path d='M3 18h18l-1.5-10-4.5 4-3-6-3 6-4.5-4z'/></svg>">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a href="#top" class="brand">
+        <svg class="crown" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18h18l-1.5-10-4.5 4-3-6-3 6-4.5-4z"/><rect x="3" y="19.5" width="18" height="1.8" rx=".9"/></svg>
+        <span data-site="name">Royal Events Management</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div class="nav-links">
+        <a href="#services">What We Do</a>
+        <a href="#weddings">Our Weddings</a>
+        <a href="#contact">Contact</a>
+        <a href="/portal/login" class="btn ghost small">Client Portal</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <svg class="ornament" viewBox="0 0 120 20" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 10h45M75 10h45"/><path d="M60 2l8 8-8 8-8-8z" fill="currentColor"/></svg>
+      <span class="eyebrow">Wedding Planning · Coordination · Décor</span>
+      <h1>Weddings planned <em>like royalty.</em></h1>
+      <p data-site="intro">From the first consultation to the last dance, we design, plan and manage weddings that feel effortless for you and unforgettable for your guests.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn gold">Check Your Date</a>
+        <a href="#weddings" class="btn light">See Our Weddings</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What We Do</span>
+        <h2>Every detail, beautifully handled.</h2>
+        <p class="muted">Whether you need us from day one or just on the day, we tailor our support to your celebration, your traditions and your budget.</p>
+      </div>
+      <div class="grid three" id="services-grid"></div>
+    </div>
+  </section>
+
+  <section class="section process">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How It Works</span>
+        <h2>From "yes" to "I do."</h2>
+      </div>
+      <div class="steps" id="process-steps"></div>
+    </div>
+  </section>
+
+  <section class="section" id="weddings">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Previous Weddings</span>
+        <h2>Love stories we've been part of.</h2>
+        <p class="muted">A glimpse at some of the celebrations we've had the honour of planning.</p>
+      </div>
+      <div class="gallery" id="gallery"></div>
+      <div class="insta-cta">
+        <a class="btn ghost" id="insta-link" href="https://www.instagram.com/royalseventsmanagement/" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          More on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials">
+    <div class="container">
+      <span class="eyebrow">Kind Words</span>
+      <div class="grid" id="testimonials"></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container contact-wrap">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2>Let's plan your day.</h2>
+        <p class="muted">Tell us a little about your wedding and we'll be in touch within 48 hours to arrange a free consultation.</p>
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <div><small>Email</small><a id="c-email" href="#"></a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            <div><small>Phone</small><a id="c-phone" href="#"></a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+            <div><small>Instagram</small><a id="c-insta" href="#" target="_blank" rel="noopener"></a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div><small>Where</small><span id="c-location"></span></div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="card form" id="contact-form" novalidate>
+        <div class="row">
+          <label>Your names *<input name="name" required autocomplete="name" placeholder="e.g. Priya & Arjun"></label>
+          <label>Email *<input name="email" type="email" required autocomplete="email"></label>
+        </div>
+        <div class="row">
+          <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+          <label>Wedding date<input name="event_date" type="date"></label>
+        </div>
+        <div class="row">
+          <label>Estimated guests<input name="guest_count" type="number" min="0" inputmode="numeric"></label>
+          <label>I'm interested in
+            <select name="service" id="service-select"><option value="">Choose a service</option></select>
+          </label>
+        </div>
+        <label>Tell us about your vision<textarea name="message" placeholder="Venue ideas, colours, traditions, anything you're dreaming of…"></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-msg" id="contact-msg"></div>
+        <button class="btn" type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="#top" class="brand">
+        <svg class="crown" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18h18l-1.5-10-4.5 4-3-6-3 6-4.5-4z"/></svg>
+        <span data-site="name">Royal Events Management</span>
+      </a>
+      <div>© <span id="year"></span> <span data-site="name">Royal Events Management</span> · <a href="/portal/login">Client Portal</a></div>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "royal-events-management",
+  "version": "1.0.0",
+  "description": "Wedding website and client portal for Royal Events Management",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --watch --disable-warning=ExperimentalWarning server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhepreConsulting/RoyalEventsManagement.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KhepreConsulting/RoyalEventsManagement/issues"
+  },
+  "homepage": "https://github.com/KhepreConsulting/RoyalEventsManagement#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.5"
+  }
+}
