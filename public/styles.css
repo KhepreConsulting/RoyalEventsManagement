@@ -151,6 +151,27 @@ textarea { min-height: 120px; resize: vertical; }
 .auth-card { width: min(440px, 100%); }
 .auth-card h1 { font-size: 2.4rem; }
 
+.portal-overview { padding: 48px 0 80px; }
+.portal-hero { display: grid; grid-template-columns: 1.4fr .9fr; gap: 28px; align-items: center; margin-bottom: 40px; }
+.portal-hero-copy h1 { margin-bottom: 18px; }
+.portal-hero-copy .hero-actions { justify-content: flex-start; }
+.portal-hero-panel { padding: 28px 24px; }
+.portal-hero-panel h3 { margin-bottom: 14px; }
+.check-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.check-list li { position: relative; padding-left: 24px; color: var(--ink); }
+.check-list li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--gold); font-weight: 700; }
+.feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-bottom: 40px; }
+.feature-card { min-height: 230px; }
+.feature-icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 12px; background: var(--cream); color: var(--plum); font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; }
+.feature-card p { color: var(--muted); margin: 0; }
+.portal-panel { background: linear-gradient(180deg, #fff 0%, var(--ivory) 100%); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(24px, 3vw, 36px); display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; }
+.portal-panel-copy h2 { margin-bottom: 14px; }
+.portal-panel-list { display: grid; gap: 18px; }
+.portal-panel-list > div { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.portal-panel-list strong { display: block; margin-bottom: 6px; font-size: 1.05rem; }
+.portal-panel-list p { margin: 0; color: var(--muted); }
+@media (max-width: 860px) { .portal-hero, .portal-panel, .feature-grid { grid-template-columns: 1fr; } }
+
 .portal-main { padding: 32px 0 80px; }
 .portal-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 28px; }
 .portal-head h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0; }
