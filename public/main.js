@@ -62,6 +62,8 @@
     $('#c-insta').textContent = c.instagramHandle; $('#c-insta').href = c.instagram;
     $('#c-location').textContent = c.location;
     $('#insta-link').href = c.instagram;
+
+    if (window.location.hash === '#contact') $('#contact').scrollIntoView();
   });
 
   // Contact form
