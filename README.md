@@ -1,4 +1,4 @@
-# Royal Events Management
+# Royals Events Management
 
 Wedding website plus a private client portal.
 

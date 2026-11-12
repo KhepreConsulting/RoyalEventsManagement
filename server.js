@@ -320,4 +320,4 @@ app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] })
 app.get('/portal', (_req, res) => res.redirect('/portal/login.html'));
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Royal Events Management running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Royals Events Management running on http://localhost:${PORT}`));

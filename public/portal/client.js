@@ -73,7 +73,7 @@
           <section class="panel">
             <h2>Messages</h2>
             <div class="thread" id="thread">
-              ${messages.length ? messages.map((m) => `<div class="msg ${m.author_role === 'client' ? 'me' : 'them'}">${esc(m.body)}<small>${m.author_role === 'client' ? 'You' : 'Royal Events'} · ${esc(fmtDateTime(m.created_at))}</small></div>`).join('') : '<p class="empty">No messages yet. Ask us anything!</p>'}
+              ${messages.length ? messages.map((m) => `<div class="msg ${m.author_role === 'client' ? 'me' : 'them'}">${esc(m.body)}<small>${m.author_role === 'client' ? 'You' : 'Royals Events'} · ${esc(fmtDateTime(m.created_at))}</small></div>`).join('') : '<p class="empty">No messages yet. Ask us anything!</p>'}
             </div>
             <form id="msg-form" class="form"><textarea name="body" placeholder="Write a message to your planner…" style="min-height:80px" required></textarea><div><button class="btn small">Send</button></div></form>
           </section>

@@ -32,7 +32,7 @@
 
   function seed() {
     const db = { seq: 100, users: [], clients: [], requests: [], messages: [], documents: [], timeline: [], inquiries: [], session: null };
-    db.users.push({ id: 1, email: 'planner@demo.com', password: DEMO_PASSWORD, role: 'admin', name: 'Royal Events Team' });
+    db.users.push({ id: 1, email: 'planner@demo.com', password: DEMO_PASSWORD, role: 'admin', name: 'Royals Events Team' });
     db.users.push({ id: 2, email: 'couple@demo.com', password: DEMO_PASSWORD, role: 'client', name: 'Priya & Arjun' });
     db.users.push({ id: 3, email: 'sarah@demo.com', password: DEMO_PASSWORD, role: 'client', name: 'Bravaen & Keerthi' });
     db.clients.push({ id: 1, user_id: 2, couple_names: 'Priya & Arjun', phone: '+1 555 010 2030', event_date: dayOffset(120), venue: 'The Grand Ballroom', guest_count: 250, package: 'Full Wedding Planning', budget: '$60,000', status: 'planning', internal_notes: 'Mehndi on Friday, ceremony Saturday. Groom\'s family prefers vegetarian menu.', created_at: nowStamp(60 * 24 * 30) });

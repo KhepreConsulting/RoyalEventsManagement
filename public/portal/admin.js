@@ -193,7 +193,7 @@ Password: ${esc(out.password)}</div>
           <section class="panel">
             <h2>Messages</h2>
             <div class="thread" id="thread">
-              ${messages.length ? messages.map((m) => `<div class="msg ${m.author_role === 'admin' ? 'me' : 'them'}">${esc(m.body)}<small>${m.author_role === 'admin' ? 'Royal Events' : esc(c.couple_names)} · ${esc(fmtDateTime(m.created_at))}</small></div>`).join('') : '<p class="empty">No messages yet.</p>'}
+              ${messages.length ? messages.map((m) => `<div class="msg ${m.author_role === 'admin' ? 'me' : 'them'}">${esc(m.body)}<small>${m.author_role === 'admin' ? 'Royals Events' : esc(c.couple_names)} · ${esc(fmtDateTime(m.created_at))}</small></div>`).join('') : '<p class="empty">No messages yet.</p>'}
             </div>
             <form id="msg-form" class="form"><textarea name="body" placeholder="Message ${esc(c.couple_names)}…" style="min-height:80px" required></textarea><div><button class="btn small">Send</button></div></form>
           </section>

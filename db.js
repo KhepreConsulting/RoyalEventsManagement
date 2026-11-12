@@ -113,7 +113,7 @@ function ensureAdmin() {
   const email = process.env.ADMIN_EMAIL || 'admin@royalseventsmanagement.com';
   const password = process.env.ADMIN_PASSWORD || crypto.randomBytes(9).toString('base64url');
   db.prepare("INSERT INTO users (email, password_hash, role, name) VALUES (?, ?, 'admin', ?)")
-    .run(email, hashPassword(password), 'Royal Events Team');
+    .run(email, hashPassword(password), 'Royals Events Team');
   console.log('\n  Created admin account');
   console.log(`    email:    ${email}`);
   if (!process.env.ADMIN_PASSWORD) console.log(`    password: ${password}   (change by setting ADMIN_PASSWORD before first run)`);

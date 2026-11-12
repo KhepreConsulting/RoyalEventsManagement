@@ -1,7 +1,7 @@
 {
   "name": "royal-events-management",
   "version": "1.0.0",
-  "description": "Wedding website and client portal for Royal Events Management",
+  "description": "Wedding website and client portal for Royals Events Management",
   "main": "server.js",
   "scripts": {
     "start": "node --disable-warning=ExperimentalWarning server.js",

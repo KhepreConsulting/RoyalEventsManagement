@@ -70,7 +70,7 @@
         return;
       }
 
-      document.title = `${wedding.couple} | Royal Events Management`;
+      document.title = `${wedding.couple} | Royals Events Management`;
       const media = Array.isArray(wedding.media) ? wedding.media : [];
       const mediaContent = media.length
         ? media.map((item, index) => renderMedia(item, index, wedding.couple)).join('')
