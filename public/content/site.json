@@ -24,7 +24,7 @@
     { "step": "Celebrate", "text": "We run the day. You enjoy every minute." }
   ],
   "weddings": [
-    { "couple": "Dhivian & Geerthana", "venue": "Sattivas Pattidar", "date": "2025", "style": "Civil ceremony and Hindu ceremony", "image": "", "palette": ["#7a1f3d", "#d4af37"], "slug": "dhivian-geerthana", "media": [{ "type": "instagram", "url": "https://www.instagram.com/p/DdEwIDbsVs2/" }] },
+    { "couple": "Dhivian & Geerthana", "venue": "Sattivas Pattidar", "date": "2025", "style": "Civil ceremony and Hindu ceremony", "image": "", "palette": ["#7a1f3d", "#d4af37"], "slug": "dhivian-geerthana", "media": [{ "type": "instagram", "url": "https://www.instagram.com/p/DdEwIDbsVs2/" }, { "type": "instagram", "url": "https://www.instagram.com/p/DeMNmMtsA-k/" }] },
     { "couple": "Bravaen & Keerthi", "venue": "Oshwall Centre", "date": "2025", "style": "Hindu Ceremony", "image": "", "palette": ["#c98b8b", "#f3e5d8"], "slug": "bravaen-keerthi", "media": [{ "type": "instagram", "url": "https://www.instagram.com/royalseventsmanagement/reel/DfISIJ1utBo/" }] },
     { "couple": "Thayaan & Karthiya", "venue": "", "date": "", "style": "Hindu Wedding", "image": "", "slug": "thayaan-karthiya", "media": [{ "type": "instagram", "url": "https://www.instagram.com/royalseventsmanagement/reel/DfE-RbEsXyN/" }] },
     { "couple": "Sanjay & Mithus", "venue": "", "date": "", "style": "Civil Wedding", "image": "", "slug": "sanjay-mithus", "media": [{ "type": "instagram", "url": "https://www.instagram.com/p/DcgmkOxoHu1/" }] },
