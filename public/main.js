@@ -14,81 +14,6 @@
   $('#year').textContent = new Date().getFullYear();
 
   const initials = (couple) => couple.split('&').map((p) => p.trim()[0] || '').join(' & ');
-  const videoModal = $('#wedding-video-modal');
-  const videoEmbed = $('#instagram-video-embed');
-  const videoStatus = $('#instagram-video-status');
-  let videoTrigger;
-
-  function processInstagramEmbeds() {
-    if (!window.instgrm || !window.instgrm.Embeds) {
-      videoStatus.textContent = 'Instagram could not load the embed. Use the link below to watch the video.';
-      console.error('Instagram embed script loaded without the embed API.');
-      return;
-    }
-    window.instgrm.Embeds.process();
-  }
-
-  function openWeddingVideo(card) {
-    const url = card.dataset.videoUrl;
-    const couple = card.querySelector('h3').textContent;
-    videoTrigger = card;
-    $('#wedding-video-title').textContent = `${couple} wedding video`;
-    $('#instagram-video-fallback').href = url;
-    videoStatus.textContent = '';
-    videoEmbed.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${esc(url)}" data-instgrm-version="14"></blockquote>`;
-    videoModal.classList.add('show');
-    videoModal.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('modal-open');
-    $('#wedding-video-close').focus();
-
-    if (window.instgrm && window.instgrm.Embeds) {
-      window.instgrm.Embeds.process();
-      return;
-    }
-
-    let script = $('#instagram-embed-script');
-    if (!script) {
-      script = document.createElement('script');
-      script.id = 'instagram-embed-script';
-      script.src = 'https://www.instagram.com/embed.js';
-      script.async = true;
-      script.addEventListener('load', processInstagramEmbeds, { once: true });
-      script.addEventListener('error', () => {
-        videoStatus.textContent = 'Instagram could not load the embed. Use the link below to watch the video.';
-        console.error('Failed to load the Instagram embed script.');
-      }, { once: true });
-      document.body.append(script);
-    } else {
-      script.addEventListener('load', processInstagramEmbeds, { once: true });
-    }
-  }
-
-  function closeWeddingVideo() {
-    videoModal.classList.remove('show');
-    videoModal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('modal-open');
-    videoEmbed.replaceChildren();
-    videoTrigger?.focus();
-  }
-
-  $('#gallery').addEventListener('click', (event) => {
-    const card = event.target.closest('.wedding[data-video-url]');
-    if (card) openWeddingVideo(card);
-  });
-  $('#gallery').addEventListener('keydown', (event) => {
-    const card = event.target.closest('.wedding[data-video-url]');
-    if (card && (event.key === 'Enter' || event.key === ' ')) {
-      event.preventDefault();
-      openWeddingVideo(card);
-    }
-  });
-  $('#wedding-video-close').addEventListener('click', closeWeddingVideo);
-  videoModal.addEventListener('click', (event) => {
-    if (event.target === videoModal) closeWeddingVideo();
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && videoModal.classList.contains('show')) closeWeddingVideo();
-  });
 
   fetch('/api/site').then((r) => r.json()).then((site) => {
     document.querySelectorAll('[data-site]').forEach((el) => { if (site[el.dataset.site]) el.textContent = site[el.dataset.site]; });
@@ -110,18 +35,22 @@
       const bg = w.image
         ? `background-image:url('${encodeURI(w.image)}')`
         : `background:radial-gradient(circle at 30% 20%, ${b}88, transparent 60%), linear-gradient(150deg, ${a}, #261b11)`;
-      const videoUrl = w.videoUrl ? esc(w.videoUrl) : '';
+      const detailUrl = w.slug && Array.isArray(w.media) && w.media.length
+        ? `wedding.html?slug=${encodeURIComponent(w.slug)}`
+        : '';
+      const tag = detailUrl ? 'a' : 'article';
+      const meta = [w.venue, w.date].filter(Boolean).map(esc).join(' · ');
       return `
-      <article class="wedding${videoUrl ? ' has-video' : ''}" ${videoUrl ? `role="button" tabindex="0" data-video-url="${videoUrl}" aria-label="Watch ${esc(w.couple)} wedding video"` : ''}>
+      <${tag} class="wedding${detailUrl ? ' has-media' : ''}" ${detailUrl ? `href="${esc(detailUrl)}" aria-label="View photos and videos from ${esc(w.couple)}"` : ''}>
         <div class="bg" style="${esc(bg)}"></div>
         ${w.image ? '' : `<div class="monogram">${esc(initials(w.couple))}</div>`}
         <div class="info">
-          <span class="meta">${esc(w.venue)} · ${esc(w.date)}</span>
+          ${meta ? `<span class="meta">${meta}</span>` : ''}
           <h3>${esc(w.couple)}</h3>
           <p>${esc(w.style)}</p>
-          ${videoUrl ? '<span class="wedding-video-cta">Watch video</span>' : ''}
+          ${detailUrl ? '<span class="wedding-media-cta">View photos & videos</span>' : ''}
         </div>
-      </article>`;
+      </${tag}>`;
     }).join('');
 
     $('#testimonials').innerHTML = site.testimonials.map((t) => `

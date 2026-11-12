@@ -43,7 +43,7 @@ Open http://localhost:3000. The admin account is created on first start (if `ADM
 
 ## Edit the website content
 
-Everything on the public site comes from **`public/content/site.json`**: business name, contact email/phone/location, Instagram link, services, process steps, previous weddings and testimonials. Add a wedding's `videoUrl` to make its gallery card open an Instagram embed. Restart the server after editing it.
+Everything on the public site comes from **`public/content/site.json`**: business name, contact email/phone/location, Instagram link, services, process steps, previous weddings and testimonials. Add a wedding's unique `slug` and `media` array to make its gallery card open a scrollable detail page. Media items support Instagram posts/reels (`type: "instagram"`), local images (`type: "image"`), and local videos (`type: "video"`). Restart the server after editing it.
 
 **Wedding photos:** put images in `public/images/weddings/` and set each wedding's `"image"`, e.g. `"image": "/images/weddings/priya-arjun.jpg"`. Weddings without a photo show a coloured monogram card in that wedding's `palette` colours. Add video files to `public/videos/`; they are served from `/videos/<filename>`.
 

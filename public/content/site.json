@@ -24,12 +24,11 @@
     { "step": "Celebrate", "text": "We run the day. You enjoy every minute." }
   ],
   "weddings": [
-    { "couple": "Dhivian & Geerthana", "venue": "Sattivas Pattidar", "date": "2025", "style": "Civil ceremony and Hindu ceremony", "image": "", "palette": ["#7a1f3d", "#d4af37"], "videoUrl": "https://www.instagram.com/p/DdEwIDbsVs2/" },
-    { "couple": "Bravaen & Keerthi", "venue": "Oshwall Centre", "date": "2025", "style": "Hindu Ceremony", "image": "", "palette": ["#c98b8b", "#f3e5d8"] },
-    { "couple": "Aisha & Omar", "venue": "Lakeside Pavilion", "date": "2024", "style": "Elegant evening reception in emerald and gold", "image": "", "palette": ["#1f4d3a", "#d4af37"] },
-    { "couple": "Maya & Daniel", "venue": "Historic Manor", "date": "2024", "style": "Classic black-tie with candlelit tablescapes", "image": "", "palette": ["#1c1c28", "#b8955a"] },
-    { "couple": "Nisha & Rohan", "venue": "Riverside Hall", "date": "2024", "style": "Vibrant sangeet and marigold mandap", "image": "", "palette": ["#e07a1f", "#8a1538"] },
-    { "couple": "Emily & Marcus", "venue": "Vineyard Terrace", "date": "2023", "style": "Golden-hour vineyard vows", "image": "", "palette": ["#6b3a5b", "#e8c99b"] }
+    { "couple": "Dhivian & Geerthana", "venue": "Sattivas Pattidar", "date": "2025", "style": "Civil ceremony and Hindu ceremony", "image": "", "palette": ["#7a1f3d", "#d4af37"], "slug": "dhivian-geerthana", "media": [{ "type": "instagram", "url": "https://www.instagram.com/p/DdEwIDbsVs2/" }] },
+    { "couple": "Bravaen & Keerthi", "venue": "Oshwall Centre", "date": "2025", "style": "Hindu Ceremony", "image": "", "palette": ["#c98b8b", "#f3e5d8"], "slug": "bravaen-keerthi", "media": [{ "type": "instagram", "url": "https://www.instagram.com/royalseventsmanagement/reel/DfISIJ1utBo/" }] },
+    { "couple": "Thayaan & Karthiya", "venue": "", "date": "", "style": "Hindu Wedding", "image": "", "slug": "thayaan-karthiya", "media": [{ "type": "instagram", "url": "https://www.instagram.com/royalseventsmanagement/reel/DfE-RbEsXyN/" }] },
+    { "couple": "Sanjay & Mithus", "venue": "", "date": "", "style": "Civil Wedding", "image": "", "slug": "sanjay-mithus", "media": [{ "type": "instagram", "url": "https://www.instagram.com/p/DcgmkOxoHu1/" }] },
+    { "couple": "Sathys & Mathuris", "venue": "", "date": "", "style": "Hindu Wedding", "image": "", "slug": "sathys-mathuris", "media": [{ "type": "instagram", "url": "https://www.instagram.com/p/DZcXTMAMj8E/" }] }
   ],
   "testimonials": [
     { "quote": "They handled every detail so we could actually enjoy our wedding. Our families still talk about it.", "who": "Priya & Arjun" },
