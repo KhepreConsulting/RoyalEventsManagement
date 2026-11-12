@@ -34,9 +34,9 @@
     const db = { seq: 100, users: [], clients: [], requests: [], messages: [], documents: [], timeline: [], inquiries: [], session: null };
     db.users.push({ id: 1, email: 'planner@demo.com', password: DEMO_PASSWORD, role: 'admin', name: 'Royal Events Team' });
     db.users.push({ id: 2, email: 'couple@demo.com', password: DEMO_PASSWORD, role: 'client', name: 'Priya & Arjun' });
-    db.users.push({ id: 3, email: 'sarah@demo.com', password: DEMO_PASSWORD, role: 'client', name: 'Sarah & James' });
+    db.users.push({ id: 3, email: 'sarah@demo.com', password: DEMO_PASSWORD, role: 'client', name: 'Bravaen & Keerthi' });
     db.clients.push({ id: 1, user_id: 2, couple_names: 'Priya & Arjun', phone: '+1 555 010 2030', event_date: dayOffset(120), venue: 'The Grand Ballroom', guest_count: 250, package: 'Full Wedding Planning', budget: '$60,000', status: 'planning', internal_notes: 'Mehndi on Friday, ceremony Saturday. Groom\'s family prefers vegetarian menu.', created_at: nowStamp(60 * 24 * 30) });
-    db.clients.push({ id: 2, user_id: 3, couple_names: 'Sarah & James', phone: '', event_date: dayOffset(38), venue: 'Garden Estate', guest_count: 90, package: 'Day-of Coordination', budget: '', status: 'final-details', internal_notes: '', created_at: nowStamp(60 * 24 * 60) });
+    db.clients.push({ id: 2, user_id: 3, couple_names: 'Bravaen & Keerthi', phone: '', event_date: dayOffset(38), venue: 'Oshwall Centre', guest_count: 90, package: 'Day-of Coordination', budget: '', status: 'final-details', internal_notes: '', created_at: nowStamp(60 * 24 * 60) });
     const req = (client_id, title, field_type, extra = {}) => db.requests.push({ id: ++db.seq, client_id, title, field_type, description: null, options: null, due_date: null, response: null, responded_at: null, status: 'open', created_at: nowStamp(), ...extra });
     req(1, 'Final guest count', 'number', { due_date: dayOffset(30) });
     req(1, 'Colour palette & theme', 'longtext', { response: 'Deep maroon, gold and ivory. Traditional with a modern touch.', responded_at: nowStamp(600), status: 'submitted' });
@@ -286,8 +286,8 @@
   window.REM_DEMO = true;
   function addBanner() {
     const bar = document.createElement('div');
-    bar.style.cssText = 'background:#b8913f;color:#fff;font:500 13px/1.4 Jost,system-ui,sans-serif;text-align:center;padding:7px 16px;';
-    bar.innerHTML = '<b>Demo mode</b> — no server; data is saved only in this browser. <button type="button" style="margin-left:8px;background:#fff;color:#4a1f3b;border:0;border-radius:999px;padding:2px 10px;font:inherit;cursor:pointer">Reset demo data</button>';
+    bar.style.cssText = 'background:#96630a;color:#fff;font:500 13px/1.4 Jost,system-ui,sans-serif;text-align:center;padding:7px 16px;';
+    bar.innerHTML = '<b>Demo mode</b> — no server; data is saved only in this browser. <button type="button" style="margin-left:8px;background:#fff;color:#2a1e12;border:0;border-radius:999px;padding:2px 10px;font:inherit;cursor:pointer">Reset demo data</button>';
     bar.querySelector('button').onclick = () => {
       if (!confirm('Reset all demo data back to the sample couples?')) return;
       try { localStorage.removeItem(KEY); } catch {}

@@ -1,19 +1,19 @@
 :root {
-  --ivory: #fbf7f1;
-  --cream: #f3ebdf;
-  --ink: #241a24;
-  --muted: #6d5f68;
-  --plum: #4a1f3b;
-  --plum-deep: #2c1024;
-  --gold: #b8913f;
-  --gold-soft: #e5d3a6;
-  --line: #e4d9c9;
+  --ivory: #fff8ef;
+  --cream: #f3e7d6;
+  --ink: #2e241a;
+  --muted: #6b5b4b;
+  --plum: #785313;
+  --plum-deep: #2a1e12;
+  --gold: #96630a;
+  --gold-soft: #f1d58a;
+  --line: #e4d4bd;
   --white: #fff;
   --ok: #2f6b4f;
   --warn: #9a6a12;
   --danger: #9b2c2c;
   --radius: 14px;
-  --shadow: 0 10px 30px rgba(44, 16, 36, .08);
+  --shadow: 0 10px 30px rgba(42, 30, 18, .08);
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Jost', system-ui, -apple-system, sans-serif;
 }
@@ -42,7 +42,7 @@ p { margin: 0 0 1em; }
 .btn.ghost { background: transparent; color: var(--plum); }
 .btn.ghost:hover { background: var(--plum); color: var(--white); }
 .btn.gold { background: var(--gold); border-color: var(--gold); }
-.btn.gold:hover { background: #9c7a30; }
+.btn.gold:hover { background: #805309; }
 .btn.light { background: transparent; border-color: rgba(255,255,255,.7); color: var(--white); }
 .btn.light:hover { background: var(--white); color: var(--plum-deep); }
 .btn.small { padding: .45em 1em; font-size: .85rem; }
@@ -51,10 +51,10 @@ p { margin: 0 0 1em; }
 .btn:disabled { opacity: .6; cursor: default; transform: none; }
 
 /* Nav */
-.nav { position: sticky; top: 0; z-index: 50; background: rgba(251, 247, 241, .92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav { position: sticky; top: 0; z-index: 50; background: rgba(255, 248, 239, .92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .nav .container { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--plum-deep); font-family: var(--serif); font-size: 1.45rem; font-weight: 600; white-space: nowrap; }
-.brand .crown { width: 30px; height: 30px; color: var(--gold); flex: none; }
+.brand .logo-mark { width: 52px; height: 52px; flex: none; object-fit: cover; border-radius: 50%; }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a { text-decoration: none; color: var(--ink); font-size: .95rem; }
 .nav-links a:hover { color: var(--gold); }
@@ -69,22 +69,22 @@ p { margin: 0 0 1em; }
 
 /* Hero */
 .hero { position: relative; min-height: min(88vh, 820px); display: grid; place-items: center; text-align: center; color: var(--white); overflow: hidden;
-  background: radial-gradient(ellipse at 20% 10%, rgba(184,145,63,.35), transparent 55%), radial-gradient(ellipse at 85% 90%, rgba(184,145,63,.25), transparent 50%), linear-gradient(160deg, var(--plum) 0%, var(--plum-deep) 70%); }
-.hero::after { content: ''; position: absolute; inset: 24px; border: 1px solid rgba(229, 211, 166, .35); border-radius: 4px; pointer-events: none; }
+  background: radial-gradient(ellipse at 20% 10%, rgba(169,111,8,.3), transparent 55%), radial-gradient(ellipse at 85% 90%, rgba(169,111,8,.22), transparent 50%), linear-gradient(160deg, var(--plum) 0%, var(--plum-deep) 70%); }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: 0; background: url("images/weddings/Royal%20Gold%20Wedding%20Emblem.png") center 48% / min(100vw, 720px) auto no-repeat; opacity: .18; pointer-events: none; }
+.hero::after { content: ''; position: absolute; inset: 24px; z-index: 0; border: 1px solid rgba(241, 213, 138, .35); border-radius: 4px; pointer-events: none; }
 .hero-inner { position: relative; z-index: 1; padding: 80px 16px; max-width: 820px; }
 .hero h1 { color: var(--white); }
 .hero h1 em { font-style: italic; color: var(--gold-soft); }
 .hero p { font-size: 1.15rem; color: rgba(255,255,255,.85); max-width: 600px; margin: 0 auto 2rem; }
 .hero .eyebrow { color: var(--gold-soft); }
 .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.ornament { width: 120px; height: 20px; margin: 0 auto 1.5rem; color: var(--gold-soft); }
 
 /* Services */
 .grid { display: grid; gap: 24px; }
 .grid.three { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
 .service-card { position: relative; transition: transform .25s, box-shadow .25s; }
-.service-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(44,16,36,.12); }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(42,30,18,.12); }
 .service-card .num { font-family: var(--serif); font-size: 2.4rem; color: var(--gold); line-height: 1; margin-bottom: 12px; display: block; }
 .service-card p { color: var(--muted); margin: 0; }
 
@@ -100,12 +100,16 @@ p { margin: 0 0 1em; }
 .wedding { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; color: var(--white); display: flex; align-items: flex-end; box-shadow: var(--shadow); }
 .wedding .bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .6s; }
 .wedding:hover .bg { transform: scale(1.05); }
-.wedding::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(28,10,22,.85), rgba(28,10,22,.1) 55%, transparent); }
+.wedding::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(35,24,13,.85), rgba(35,24,13,.1) 55%, transparent); }
 .wedding .info { position: relative; z-index: 1; padding: 28px; }
 .wedding h3 { color: var(--white); margin-bottom: .15em; font-size: 1.8rem; }
 .wedding .meta { font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-soft); }
 .wedding p { margin: .5em 0 0; color: rgba(255,255,255,.85); font-size: .95rem; }
 .wedding .monogram { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -70%); font-family: var(--serif); font-size: 5rem; font-style: italic; color: rgba(255,255,255,.25); z-index: 1; white-space: nowrap; }
+.wedding.has-video { cursor: pointer; }
+.wedding.has-video:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.wedding-video-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; color: var(--gold-soft); font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.wedding-video-cta::before { content: ''; width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 9px solid currentColor; }
 .insta-cta { margin-top: 40px; text-align: center; }
 
 /* Testimonials */
@@ -131,7 +135,7 @@ p { margin: 0 0 1em; }
 @media (max-width: 560px) { .form .row { grid-template-columns: 1fr; } }
 label { display: grid; gap: 6px; font-size: .85rem; font-weight: 500; color: var(--muted); letter-spacing: .03em; }
 input, select, textarea { font: inherit; font-size: 1rem; color: var(--ink); background: var(--ivory); border: 1px solid var(--line); border-radius: 10px; padding: .75em .9em; width: 100%; transition: border-color .2s, box-shadow .2s; }
-input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,145,63,.18); }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(150,99,10,.18); }
 textarea { min-height: 120px; resize: vertical; }
 .hp { position: absolute; left: -9999px; }
 .form-msg { font-size: .95rem; padding: 12px 14px; border-radius: 10px; display: none; }
@@ -245,9 +249,17 @@ tr.clickable:hover td { background: var(--ivory); }
 .back-link { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--muted); font-size: .9rem; margin-bottom: 12px; cursor: pointer; background: none; border: 0; padding: 0; font-family: inherit; }
 .back-link:hover { color: var(--plum); }
 
-.modal-bg { position: fixed; inset: 0; background: rgba(28,10,22,.55); display: none; place-items: center; z-index: 100; padding: 16px; }
+.modal-bg { position: fixed; inset: 0; background: rgba(35,24,13,.55); display: none; place-items: center; z-index: 100; padding: 16px; }
 .modal-bg.show { display: grid; }
 .modal { background: var(--white); border-radius: var(--radius); padding: 28px; width: min(560px, 100%); max-height: 90vh; overflow-y: auto; }
+.wedding-video-dialog { position: relative; background: var(--ivory); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; width: min(600px, 100%); max-height: 90vh; overflow-y: auto; }
+.wedding-video-dialog h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin: 0 44px 18px 0; }
+.video-modal-close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; background: var(--cream); color: var(--ink); font: 1.5rem/1 var(--sans); cursor: pointer; }
+#instagram-video-embed { display: grid; justify-items: center; }
+.instagram-media { width: 100% !important; min-width: 0 !important; max-width: 540px !important; margin: 0 auto !important; }
+.instagram-video-fallback { display: block; margin-top: 12px; text-align: center; color: var(--plum); }
+.instagram-video-status { margin: 8px 0 0; color: var(--muted); font-size: .9rem; text-align: center; }
+body.modal-open { overflow: hidden; }
 .modal h2 { font-size: 1.8rem; }
 .modal .actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; }
 
@@ -258,5 +270,5 @@ tr.clickable:hover td { background: var(--ivory); }
 .progress { height: 8px; background: var(--cream); border-radius: 999px; overflow: hidden; margin-top: 8px; }
 .progress > div { height: 100%; background: var(--gold); border-radius: 999px; transition: width .4s; }
 .hidden { display: none !important; }
-@media (max-width: 640px) { .nav-user { display: none; } .nav .brand span { font-size: 1.2rem; } }
+@media (max-width: 640px) { .nav-user { display: none; } .nav .brand span { font-size: 1.2rem; } .nav .brand .logo-mark { width: 42px; height: 42px; } }
 @media (max-width: 560px) { .hero .eyebrow { letter-spacing: .15em; font-size: .7rem; } .hero::after { inset: 12px; } }

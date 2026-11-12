@@ -24,8 +24,8 @@
     { "step": "Celebrate", "text": "We run the day. You enjoy every minute." }
   ],
   "weddings": [
-    { "couple": "Dhivian & Geerthana", "venue": "Sattivas Pattidar", "date": "2025", "style": "Civil ceremony and Hindu ceremony", "image": "", "palette": ["#7a1f3d", "#d4af37"] },
-    { "couple": "Sarah & James", "venue": "Garden Estate", "date": "2025", "style": "Romantic outdoor ceremony with blush florals", "image": "", "palette": ["#c98b8b", "#f3e5d8"] },
+    { "couple": "Dhivian & Geerthana", "venue": "Sattivas Pattidar", "date": "2025", "style": "Civil ceremony and Hindu ceremony", "image": "", "palette": ["#7a1f3d", "#d4af37"], "videoUrl": "https://www.instagram.com/p/DdEwIDbsVs2/" },
+    { "couple": "Bravaen & Keerthi", "venue": "Oshwall Centre", "date": "2025", "style": "Hindu Ceremony", "image": "", "palette": ["#c98b8b", "#f3e5d8"] },
     { "couple": "Aisha & Omar", "venue": "Lakeside Pavilion", "date": "2024", "style": "Elegant evening reception in emerald and gold", "image": "", "palette": ["#1f4d3a", "#d4af37"] },
     { "couple": "Maya & Daniel", "venue": "Historic Manor", "date": "2024", "style": "Classic black-tie with candlelit tablescapes", "image": "", "palette": ["#1c1c28", "#b8955a"] },
     { "couple": "Nisha & Rohan", "venue": "Riverside Hall", "date": "2024", "style": "Vibrant sangeet and marigold mandap", "image": "", "palette": ["#e07a1f", "#8a1538"] },
@@ -33,6 +33,6 @@
   ],
   "testimonials": [
     { "quote": "They handled every detail so we could actually enjoy our wedding. Our families still talk about it.", "who": "Priya & Arjun" },
-    { "quote": "The client portal kept everything in one place — no lost emails, no stress.", "who": "Sarah & James" }
+    { "quote": "The client portal kept everything in one place — no lost emails, no stress.", "who": "Bravaen & Keerthi" }
   ]
 }
